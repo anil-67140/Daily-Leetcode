@@ -21,9 +21,28 @@ public class Palindrome {
 	    	return temp == rev;
 	        
 	    }
+	    
+ public static boolean isPalindromee(int x) {
+	 if(x<0 ||(x !=0 && x%10 ==0)) {
+		 return false;
+	 }
+	 int reversed = 0;
+	 while(x>reversed) {
+		 reversed = reversed* 10 + x%10;
+		 x /= 10;
+		 System.out.println("reverserd "+ reversed + " ans" + x);
+		 
+	 }
+	 return (x==reversed)||(x==reversed /10);
+	    	
+	    
+	    }
 	    public static void main(String[] args) {
 			boolean ans = isPalindrome(121);
 			System.out.println(ans);
+			
+			boolean anse = isPalindromee(121);
+			System.out.println(anse);
 		}
 	
 }
